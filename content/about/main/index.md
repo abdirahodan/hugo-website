@@ -5,7 +5,7 @@ number_featured: 1 # pulling from mainSections in config.toml
 number_categories: 3 # set to zero to exclude
 show_intro: true
 intro: |
-  Cultures clash as I adjust to the challenges of life in Paris while juggling my career, new friendships, and love life. Here is how to catch up with me lately!
+ I am currently working on an undergraduate economic research project that examines into disparities in public transportation in New York City." This project combines socioeconomic concept with R data analysis and a basic machine learning method. In addition, I am engaged in several of side projects. In addition, I am widening my skill set by learning Python, with the goal of deepening my grasp of machine learning, despite my affection for R.
 show_outro: true
 outro: |
   <i class="fas fa-mug-hot pr2"></i>If my blog has helped you, you can [buy me a coffee](https://ko-fi.com/)!
