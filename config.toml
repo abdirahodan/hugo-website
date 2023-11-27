@@ -1,7 +1,7 @@
 baseURL = "https://idyllic-starburst-0ca494.netlify.app/"
 theme = "hugo-apero"
 languageCode = "en"
-title = "Personal website of Hodan Abdirahman"
+title = "personal website"
 author = "Hodan Abdirahman"
 copyright = "" # set to override the auto generated copyright using org info and now year
 googleAnalytics = ""
