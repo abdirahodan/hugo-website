@@ -59,34 +59,6 @@ categories:
 		<div class="body-text">Secondly, by examining the loan debt-to-income ratio for each racial group, we could have identified any disparities in the level of debt relative to income. This ratio would have helped us understand whether certain groups are more burdened by student loan debt compared to others.</div>
 		<div class="body-text"> Additionally, analyzing the variations in loan debt burden among racial groups based on educational attainment levels would have been valuable. We could have determined if there are differences in the level of student loan debt for individuals of different races, even after taking into account their educational achievements.</div>
 		<div class="body-text">These additional analyses would have provided a deeper understanding of the relationship between race, income, educational attainment, and the burden of student loan debt. This knowledge would be crucial in identifying disparities, developing targeted interventions, and advocating for policies that ensure equal access to education and reduce the financial challenges faced by specific racial groups.</div>
-		
-    <!-- FOOTER -->
-    <div id="footer">
-      <!-- 
-        TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
-
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" target="_blank" href="https://github.com/abdirahodan">
-        <image src="../assets/icons/github-circ.svg" class="footer-icon"/>
-      </a>
-      <!-- 
-        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
-      
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/hodan-abdirahman-169a611aa/">
-        <image src="../assets/icons/linkedin-circ.svg" class="footer-icon"/>
-      </a>
-      <!-- 
-        TODO - Change the email after "mailto" to your contact email 
-      
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" href="mailto:abdirahodan@gmail.com">
-        <image src="../assets/icons/mail-circ.svg" class="footer-icon"/>
-      </a>
-    </div>
 
 	</body>
 </html>
