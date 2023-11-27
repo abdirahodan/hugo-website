@@ -2,7 +2,7 @@
 title: "Tech Giants Tumble: Have these Tech Giants Reached Their Limit?"
 #subtitle: "How to add panelsets in R Markdown posts."
 excerpt: "Add tabbed sections with code and results."
-date: 2021-08-5
+date: 2021-08-23
 author: "Alison Hill"
 draft: false
 # layout options: single, single-sidebar
