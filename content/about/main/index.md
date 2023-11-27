@@ -1,7 +1,7 @@
 ---
 ## Configure page content in wide column
 title: "What I'm up to lately" # leave blank to exclude
-number_categories: 3 # set to zero to exclude
+number_categories: 1 # set to zero to exclude
 show_intro: true
 intro: |
  Engaged in undergraduate research that delves into the disparities in public transportation across New York City. This study merges socio-economic theories with data analysis using R and elementary machine learning techniques to identify the key factors contributing to inequality in public transit.
