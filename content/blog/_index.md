@@ -12,7 +12,7 @@ layout: list-sidebar # list, list-sidebar, list-grid
 
 # for list-sidebar layout
 sidebar: 
-  title: Blog
+  title:Blog
   description: |
     This blog is throughts and exploring various concepts. 
   author: "Hodan Abdirahman"
