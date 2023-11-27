@@ -1,11 +1,10 @@
 ---
 ## Configure page content in wide column
 title: "What I'm up to lately" # leave blank to exclude
-number_featured: 1 # pulling from mainSections in config.toml
 number_categories: 3 # set to zero to exclude
 show_intro: true
 intro: |
-I am currently working on an undergraduate economic research project that examines into disparities in public transportation in New York City. This project combines socioeconomic concept with R data analysis and a basic machine learning method.
+ I am currently working on an undergraduate economic research project that examines into disparities in public transportation in New York City." This project combines socioeconomic concept with R data analysis and a basic machine learning method. In addition, I am engaged in several of side projects. In addition, I am widening my skill set by learning Python, with the goal of deepening my grasp of machine learning, despite my affection for R.
 show_outro: true
 outro: |
   <i class="fas fa-mug-hot pr2"></i>If my blog has helped you, you can [buy me a coffee](https://ko-fi.com/)!
