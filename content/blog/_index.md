@@ -1,7 +1,8 @@
 ---
 title: Blog
 description: |
-  A blog about data science. I mainly blog about combination of economics & data.
+  A blog about data science. I mainly blog about #rstats and
+  teaching. I have more websites than blog posts.
 author: "Hodan Abdirahman"
 show_post_thumbnail: true
 thumbnail_left: false
@@ -12,10 +13,11 @@ layout: list-sidebar # list, list-sidebar, list-grid
 
 # for list-sidebar layout
 sidebar: 
-  title:Blog
+  title: Blog
   description: |
-    This blog is throughts and exploring various concepts. 
+    This blog is my [digital garden](https://nesslabs.com/digital-garden-set-up), somewhere between a notepad and a blog. 
   author: "Hodan Abdirahman"
+  text_link_label: Subscribe via RSS
   text_link_url: /index.xml
   show_sidebar_adunit: true # show ad container
 
