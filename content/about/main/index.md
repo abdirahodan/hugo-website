@@ -4,7 +4,7 @@ title: "What I'm up to lately" # leave blank to exclude
 number_categories: 3 # set to zero to exclude
 show_intro: true
 intro: |
- I am currently working on an undergraduate economic research project that examines into disparities in public transportation in New York City. This project combines socioeconomic concept with R data analysis and a basic machine learning method.
+ Engaged in undergraduate research that delves into the disparities in public transportation across New York City. This study merges socio-economic theories with data analysis using R and elementary machine learning techniques to identify the key factors contributing to inequality in public transit.
 #show_outro: true
 #outro: |
  # <i class="fas fa-mug-hot pr2"></i>If my blog has helped you, you can [buy me a coffee](https://ko-fi.com/)!
