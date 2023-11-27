@@ -16,7 +16,7 @@ sidebar:
   description: |
   Blogs are a canvas for my thoughts, where I freely paint with words, often inspired by data and its intriguing connections.
     
-    #Check out the _index.md file in the /blog folder 
+  # Check out the _index.md file in the /blog folder 
    # to edit this content. 
  author: "Hodan Abdirahman"
   text_link_label: Subscribe via RSS
