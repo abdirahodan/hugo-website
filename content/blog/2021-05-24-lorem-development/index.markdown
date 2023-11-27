@@ -1,17 +1,3 @@
----
-title: "Tech Giants Tumble: Have these Tech Giants Reached Their Limit?
-"
-subtitle: "For this project, I have chosen a data set on Big Tech stock prices that was published on February 7, 2023. The data set reveals a significant and sudden decrease in stock prices in 2022. Interestingly, mega-cap technology stocks were considered one of the most promising investments for stock investors in 2020 and 2021. This contrasting trend raises a compelling question: Have these tech giants reached their maximum potential?"
-excerpt: "Add tabbed sections with code and results."
-date: 2021-06-22
-author: "Hodan Abdirahman"
-draft: false
-# layout options: single, single-sidebar
-layout: single
-categories:
-- stocks
----
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
