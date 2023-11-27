@@ -16,7 +16,6 @@ sidebar:
   description: |
     This blog is throughts and exploring various concepts. 
   author: "Hodan Abdirahman"
-  text_link_label: Subscribe via RSS
   text_link_url: /index.xml
   show_sidebar_adunit: true # show ad container
 
