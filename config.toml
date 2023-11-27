@@ -31,8 +31,8 @@ enableEmoji = true
   orgName = "Hodan Abdirahman"
   orgLocal = "USA"
   description = "A modern, beautiful, and easily configurable blog theme for Hugo."
-  favicon = "/img/iconon (1).ico"
-  logo = "/img/ico_100.png"
+  favicon = "/img/ico (1).ico"
+  logo = "/img/ico (1).png"
   mainSections = ["blog", "project", "talk"]
   navallcaps = true
   # show/hide social icons in site header & footer
