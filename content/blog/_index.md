@@ -15,9 +15,6 @@ sidebar:
   title: Blogs
   description: |
     I chat about all things at the crossroads of economics and data science - breaking down big ideas into bite-sized, easy-to-digest pieces.
-    
-    Check out the _index.md file in the /blog folder 
-    to edit this content. 
   author: "Hodan Abdirahman"
   #text_link_label: Subscribe via RSS
   text_link_url: /index.xml
