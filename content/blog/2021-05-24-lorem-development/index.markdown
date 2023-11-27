@@ -8,70 +8,131 @@ draft: false
 # layout options: single, single-sidebar
 layout: single
 categories:
-- evergreen
+- stocks
 ---
 
 {{< here >}}
+For this project, I have chosen a data set on Big Tech stock prices that was published on February 7, 2023. The data set reveals a significant and sudden decrease in stock prices in 2022. Interestingly, mega-cap technology stocks were considered one of the most promising investments for stock investors in 2020 and 2021. This contrasting trend raises a compelling question: Have these tech giants reached their maximum potential?
 
-## But first, panelsets with R code chunks
+Let's start off by loading the data into R.
 
-{{< panelset class="greetings" >}}
-{{< panel name="Plot" >}}
-
-<img src="{{< blogdown/postref >}}index_files/figure-html/plot-1.png" width="672" />
-
-{{< /panel >}}
-{{< panel name="Code" >}}
-
-
-```r
-plot(pressure)
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+library(tidyverse)
+library(dplyr)
 ```
 
-{{< /panel >}}
-{{< /panelset  >}}
+```{r}
+big_tech_stock_prices <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-02-07/big_tech_stock_prices.csv')
+big_tech_companies <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-02-07/big_tech_companies.csv')
 
-## I'm half machine. I'm a monster.
+```
 
-It's a hug, Michael. I'm hugging you. I'm half machine. I'm a monster. There's only one man I've ever called a coward, and that's Brian Doyle Murray. No, what I'm calling you is a television actor. Bad news. Andy Griffith turned us down. He didn't like his trailer.
+This data set is pretty massive. So I took the initiative to break down the various companies into a sorted categories based on similarities, so the plots would not be cluttered. There are 14 companies in total.
 
-No, I did not kill Kitty. However, I am going to oblige and answer the nice officer's questions because I am an honest man with no secrets to hide. Guy's a pro. Really? __Did nothing cancel?__ *Get me a vodka rocks.* And a piece of toast.
+**Group 1: E-commerce and Consumer Tech**
 
-## No… but I'd like to be asked!
+1)  *Amazon.com, Inc. (AMZN)*
+2)  *Meta Platforms, Inc. (META)*
+3)  *Netflix, Inc. (NFLX)*
 
-Oh, you're gonna be in a coma, all right. Steve Holt! I hear the jury's still out on science. No, I did not kill Kitty. However, I am going to oblige and answer the nice officer's questions because I am an honest man with no secrets to hide.
+**Group 2: Enterprise Solutions and Technology**
 
-1. Really? Did nothing cancel?
-2. That's what it said on 'Ask Jeeves.'
-3. Get me a vodka rocks. And a piece of toast.
+1)  *Apple Inc. (AAPL)*
+2)  *Adobe Inc. (ADBE)*
+3)  *Salesforce, Inc. (CRM)*
+4)  *Cisco Systems, Inc. (CSCO)*
+5)  *International Business Machines Corporation (IBM)*
+6)  *Microsoft Corporation (MSFT)*
+7)  *Oracle Corporation (ORCL)*
 
-### That's what it said on 'Ask Jeeves.'
+**Group 3: Specialized Technology and Innovation**
 
-Did you enjoy your meal, Mom? You drank it fast enough. What's Spanish for "I know you speak English?" Bad news. Andy Griffith turned us down. He didn't like his trailer. Really? Did nothing cancel? I care deeply for nature.
+1)  *Alphabet Inc. (GOOGL)*
+2)  *Intel Corporation (INTC)*
+3)  *NVIDIA Corporation (NVDA)*
+4)  *Tesla, Inc. (TSLA)*
 
-* Michael!
-* No! I was ashamed to be SEEN with you. I like being with you.
-* We just call it a sausage.
+Let's check if the claim in the [article](https://www.morningstar.com/markets/5-charts-big-tech-stocks-collapse) is true using a simple method. We'll analyze some important numbers about the closing prices for the years mentioned as the best and worst. The closing price shows what people think about a stock on a specific day, so it gives us an idea of the overall market mood. We'll look at the average, middle value (median), and total of the closing prices. These statistics help us understand the typical and overall values for each year.
 
-Well, what do you expect, mother? It's called 'taking advantage.' It's what gets you ahead in life. Now, when you do this without getting punched in the chest, you'll have more fun. No, I did not kill Kitty. However, I am going to oblige and answer the nice officer's questions because I am an honest man with no secrets to hide.
+```{r}
+stock_prices_2020 <- big_tech_stock_prices%>%
+  filter(date >= "2020-01-01", date <= "2020-12-31") %>%
+    summarise(
+    mean_close = mean(close),
+    median_close = median(close),
+    total_close = sum(volume)
+  )
 
-I'm half machine. I'm a monster. It's a hug, Michael. I'm hugging you. Guy's a pro. First place chick is hot, but has an attitude, doesn't date magicians. He'll want to use your yacht, and I don't want this thing smelling like fish.
+stock_prices_2022 <- big_tech_stock_prices %>%
+  filter(date >= "2022-01-01", date <= "2022-12-31") %>%
+  summarise(
+    mean_close = mean(close),
+    median_close = median(close),
+    total_close = sum(close)
+  )
 
-He'll want to use your yacht, and I don't want this thing smelling like fish. Now, when you do this without getting punched in the chest, you'll have more fun. We just call it a sausage. Guy's a pro. Bad news. Andy Griffith turned us down. He didn't like his trailer.
+(stock_prices_2020)
+(stock_prices_2022)
 
-There's only one man I've ever called a coward, and that's Brian Doyle Murray. No, what I'm calling you is a television actor. It's called 'taking advantage.' It's what gets you ahead in life. We just call it a sausage.
+```
 
-Michael! First place chick is hot, but has an attitude, doesn't date magicians. I've opened a door here that I regret. Guy's a pro.
+Next, let's see the changes in daily prices through the years. Examining the historical fluctuations in price ranges enables us to pinpoint periods characterized by high or low volatility. This info can come in handy for making smart trading plans, managing risks, and getting a feel for what folks in the market are thinking.
 
-Army had half a day. Michael! Now, when you do this without getting punched in the chest, you'll have more fun. Well, what do you expect, mother? Now, when you do this without getting punched in the chest, you'll have more fun.
+```{r}
 
-But I bought a yearbook ad from you, doesn't that mean anything anymore? Oh, you're gonna be in a coma, all right. It's a hug, Michael. I'm hugging you. I've opened a door here that I regret.
+big_tech<-big_tech_stock_prices%>%
+    filter(date >= "2015-01-01")
 
-There's only one man I've ever called a coward, and that's Brian Doyle Murray. No, what I'm calling you is a television actor. That's why you always leave a note! He'll want to use your yacht, and I don't want this thing smelling like fish.
+ggplot(big_tech, aes(x = date, y = high - low)) +
+  geom_line(color="lightpink") +
+  labs(x = "Year", y = "Daily Price Range") +
+  ggtitle("Changes in Daily Price Ranges of Big Tech Stocks")+
+  theme_classic()
 
-I've opened a door here that I regret. Now, when you do this without getting punched in the chest, you'll have more fun. I care deeply for nature. It's called 'taking advantage.' It's what gets you ahead in life.
 
-It's a hug, Michael. I'm hugging you. No… but I'd like to be asked! What's Spanish for "I know you speak English?" It's called 'taking advantage.' It's what gets you ahead in life. It's a hug, Michael. I'm hugging you.
+```
 
-I don't understand the question, and I won't respond to it. Really? Did nothing cancel? Did you enjoy your meal, Mom? You drank it fast enough. Bad news. Andy Griffith turned us down. He didn't like his trailer.
+Observing the frequent occurrence of price drops raises the question of whether this pattern is considered normal in the realm of trading.
+
+I am curious about the connection between the opening and closing prices of different big tech companies and how this connection varies across different months. To explore this, I will focus on the year 2021 and calculate the average prices for each month. By conducting this analysis, I hope to uncover insights into the dynamic nature of prices and identify any possible patterns.The companies will be from group 2.
+
+```{r}
+#| echo: false
+group_2<-c("AAPL", "ADBE", "CRM", "CSCO","IBM","MSFT","ORCL")
+filtered_prices <- big_tech_stock_prices %>%
+  filter(date >= "2021-01-01", date <= "2021-12-31") %>%
+  mutate(month = format(date, "%Y-%m")) %>%
+  group_by(stock_symbol, month) %>%
+  filter(stock_symbol == group_2)%>%
+  summarise(avg_open = mean(open))
+
+ggplot(filtered_prices, aes(x = month, y = avg_open, color = stock_symbol, group = stock_symbol)) +
+  geom_line() +
+  labs(x = "Month", y = "Average Opening Price", color = "Companies") +
+  theme_classic()+
+    theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+
+
+```
+
+Upon observation, there are distinct patterns evident in the data. For instance, in the month of March, we observe a decrease in prices for a few companies. In contrast, the subsequent year exhibits a slight increase. Notably, Adobe demonstrates a visible pattern of fluctuation, with alternating months of price increases and decreases.
+
+During the epidemic, consumer technology companies such as META might have observed an increase in their stock prices as a result of greater time spent at home and people's boredom. Similarly, e-commerce companies like Amazon could have benefited from the growing preference for contactless and convenient deliveries. Did the epidemic influence the stock prices of major tech companies, based on their specific objectives? This can be examined by comparing the adjusted closing prices.
+
+```{r}
+#| echo: false
+selected_companies <- big_tech_stock_prices%>%
+filter(date >= "2019-01-01", date <= "2022-01-01" &  stock_symbol == c("TSLA", "AMZN", "META"))
+
+# Create the plot
+ggplot(selected_companies, aes(x = date, y = adj_close, color = stock_symbol)) +
+  geom_line() +
+  labs(x = "Date", y = "Stock Price", color = "Stock Symbol") +
+  scale_color_discrete(name = "Companies", labels = c("Tesla", "Amazon", "Meta"))+
+  theme_classic()
+
+```
+
+The graph illustrates a significant surge in META's stock price during 2020, surpassing both Tesla and Amazon at one point. This rise can be attributed to increased user engagement, which can be explained by the fact that more people were staying at home and seeking connections with others through social media. It is reasonable to expect platforms like Facebook and Instagram to experience heightened user engagement.
 
