@@ -5,9 +5,9 @@ number_categories: 3 # set to zero to exclude
 show_intro: true
 intro: |
  I am currently working on an undergraduate economic research project that examines into disparities in public transportation in New York City. This project combines socioeconomic concept with R data analysis and a basic machine learning method.
-show_outro: true
-outro: |
-  <i class="fas fa-mug-hot pr2"></i>If my blog has helped you, you can [buy me a coffee](https://ko-fi.com/)!
+#show_outro: true
+#outro: |
+ # <i class="fas fa-mug-hot pr2"></i>If my blog has helped you, you can [buy me a coffee](https://ko-fi.com/)!
 ---
 
 ** index doesn't contain a body, just front matter above.
