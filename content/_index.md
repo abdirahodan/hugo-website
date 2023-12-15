@@ -1,7 +1,7 @@
 ---
 title: "Hodan Abdirahman"
 subtitle: "Inspiring Data Consultant "
-description: "I am currently pursuing a major in Economics paired with Data Science, fueled by a deep passion for extracting insights from data. I believe data analytics holds immense potential for revolutionizing business and life as we know it."
+description: "mmm"
 date: 2019-02-18T12:27:33-06:00
 images:
   - img/revoir.jpg
