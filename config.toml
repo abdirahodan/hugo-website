@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://657cb5d524919b2c0fd89b5c--incandescent-sopapillas-3db761.netlify.app/"
 theme = "hugo-apero"
 languageCode = "en"
 title = "personal website"
